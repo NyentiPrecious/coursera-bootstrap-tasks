@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    body {
+background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/Q8LG3RT8EP.jpg');
+background-size: 120%;
+background-position: top;
+/*   box-sizing: border-box; */
+font-family: 'Raleway', sans-serif;
+}
+
+.lead {
+width: 600px;
+margin: auto;
+color: #46526A;
+font-size: 2em;
+}
+
+label {
+color: #46526A;
+}
+.container {
+width: 600px;
+height: 600px;
+margin: auto;
+}
+
+form {
+width: 100%;
+}
+
+input, label {
+width: 100%;
+line-height: 1.5em;
+}
+
+input {
+line-height: 2em;
+}
+
+.last-group, .first-group {
+display: inline-block;
+width: 240px;
+margin-bottom: 30px;
+}
+
+.first-group {
+margin-right: 115px;
+}
+
+.vac-group, .email-group {
+display: inline-block;
+
+}
+
+.vac-group {
+width: 110px;
+}
+
+.vac-group input {
+width: 85px;
+}
+
+.email-group {
+width: 290px;
+margin-left: 195.5px;
+padding-top: 2px;
+}
+
+input:placeholder-shown,
+input {
+font-family: 'Raleway', sans-serif;
+font-size: .8em;
+font-weight: 400;
+outline: none;
+}
+
+.row {
+width: 100%;
+}
+
+button {
+width: 200px;
+height: 40px;
+border-radius: 4px;
+margin-top: 34px;
+margin-left: 200px;
+font-family: 'Raleway', sans-serif;
+font-size: 1em;
+font-weight: 500;
+background: #46526A;
+color: white;
+border: none;
+padding: 18px;
+}
+
+
+button:hover {
+background-color: #617293;
+cursor: pointer;
+outline: none;
+}
+
+.round {
+position: relative;
+}
+
+.round label {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 50%;
+cursor: pointer;
+height: 28px;
+left: 0;
+position: absolute;
+top: 0;
+width: 28px;
+}
+
+.round label:after {
+border: 2px solid #fff;
+border-top: none;
+border-right: none;
+content: "";
+height: 6px;
+left: 7px;
+opacity: 0;
+position: absolute;
+top: 8px;
+transform: rotate(-45deg);
+width: 12px;
+}
+
+.round input[type="checkbox"] {
+visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+background-color: #66bb6a;
+border-color: #66bb6a;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+opacity: 1;
+}
+
+
+
+
+.dot{
+display: flex;
+padding: 60px;
+gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+  </style>
+
+
+<body>
+    <div class="lead">
+      <h1>Reserve a table</h1>
+    </div>
+
+
+    <div class="container">
+
+      
+
+<div class="dot" >
+<p>
+    Number of guests
+</p>
+        <div class="round">
+            <div  style="display: flex;"    >
+            <div>
+            <input type="checkbox" checked id="checkbox" /> 
+            <label for="checkbox"></label>
+        </div>
+            <div>1</div>
+          </div>
+        </div>
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox"></label>
+          </div>
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox"></label>
+          </div>
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox"></label>
+          </div>
+          
+</div>
+
+      <form action="">
+        <div class="first-group">
+          <label for="first">Date:</label>
+          <input id="first" type="text" />
+        </div>
+        <div  class="last-group">
+          <label for="last">Time: </label>
+          <input id="last" type="text" />
+        </div>
+        
+        <div class="row">
+          <button disabled type="submit">
+              Reserve
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="card" style="width: 18rem; display: flex; gap: 2rem; align-self: center; align-items: center; justify-content: center; justify-items: center; justify-self: center; ">
+        
+        <div class="card-body">
+          <h2 style="color: red;" class="card-title">Task 2</h2>
+          <h3>Weekend Grand Buffet</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit facilis reiciendis ullam porro quae, in fugit dignissimos error ab accusamus est modi,
+             inventore tempora? Quaerat dolore corporis incidunt tempore soluta.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+
+        <img class="card-img-top" src="..." alt="Card image cap">
+      </div>
+
+      <button style="background-color: red;" type="button" class="btn btn-warning">Reserve table</button>
+
+    <h2>Task 3</h2>
+
+</body>
+
+  </body>
+</html>
