@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+    color: #333333;
+    font-family:'Helvetica', arial;
+    height:1500px;
+}
+.wrap {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+p {
+    margin-bottom: 20px;
+}
+.btn {
+    background: #428bca;
+    border: #357ebd solid 1px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+}
+.btn:hover {
+    background: #357ebd;
+}
+.btn.btn-big {
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+}
+.btn-close {
+    color: #aaaaaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.btn-close:hover {
+    color: #919191;
+}
+.modal:target:before {
+    display: none;
+}
+.modal:before {
+    content:"";
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+.modal .modal-dialog {
+    background: #fefefe;
+    border: #333333 solid 1px;
+    border-radius: 5px;
+    margin-left: -200px;
+    position: fixed;
+    left: 40%;
+    z-index: 11;
+    width: 580px;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    top: 20%;
+}
+.modal:target .modal-dialog {
+    top: -100%;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+}
+.modal-body {
+    padding: 20px;
+}
+.modal-header, .modal-footer {
+    padding: 10px 20px;
+}
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
+}
+.modal-header h2 {
+    font-size: 20px;
+}
+.modal-footer {
+    border-top: #eeeeee solid 1px;
+    text-align: right;
+}
+
+
+.form-wrapper {
+  margin: 1px;
+}
+.full-input {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid ;
+  height: 37px;
+}
+input {
+  outline: none;
+  border: none;
+  height: 10px;
+  display:block;
+  /* line-height: 1.2em;
+  font-size: 9pt; */
+}
+label {
+  display: block;
+  font-size: 16px;
+ 
+}
+
+
+
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+
+button {
+	padding:8px 17px; 
+	background:#5ba545; 
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	color: #fff;
+}
+</style>
+
+<body>
+    <div class="modal" id="modal-one" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div style="display: flex;" >
+                 <h2>Reserve a table</h2>
+
+                 <h3 style="margin-left: 2rem; color: red; "> Task 1</h3></div>
+     <a href="#modal-one" class="btn-close" aria-hidden="true">×</a>
+    
+            </div>
+            <div class="modal-body">
+
+                
+<div style="display: flex;" class="dot" >
+    <p>
+        Number of guests
+    </p>
+            <div class="round">
+                <div  style="display: flex;"    >
+                <div>
+                <input type="checkbox" checked id="checkbox" /> 
+                <label for="checkbox"></label>
+            </div>
+                <div>1</div>
+              </div>
+            </div>
+              <div  class="round">
+                <input type="checkbox" checked id="checkbox" />
+                <label for="checkbox"></label>
+              </div>
+                <div>2</div>
+            
+              <div class="round">
+                <input type="checkbox" checked id="checkbox" />
+                <label for="checkbox"></label>
+            </div>
+            <div>3</div>
+             
+              <div class="round">
+                <input type="checkbox" checked id="checkbox" />
+                <label for="checkbox"></label>
+            </div>
+            <div>4</div>
+           
+              
+</div>
+
+
+<div style="display: flex;" id="outer">
+    <p >Section</p>
+    <div style="margin-left: 7rem;" class="inner">
+              <form action="" target="_blank">
+                   <button  type="submit"><i class="fa fa-file-text-o"></i> Non-Smoking</button></div>
+              </form>
+    <div class="inner">
+              <form action="" target="_blank">
+          <button style="background-color: red;" type="submit"><i class="fa fa-code"></i>Smoking</button></div>	
+              </form>
+              <h3 style="margin-left: 2rem; color: red; "> Task 2</h3>
+          </div>
+
+          <form style="display: flex; justify-content: space-between; " action="">
+          
+            <h3>Date and <br> Time</h3>
+
+            <div class='full-input'><label for='name'>Date</label>
+                <input type='text' name='Date'></input></div>
+                <div class='full-input'><label for='name'>Time</label>
+                    <input style="height: 10px;" type='text' name='Time'></input></div>
+            
+            
+          </form>
+          
+ 
+<div style="display: flex; align-self: center; align-items: center; justify-content: center; margin-top: 2rem; " >
+    <a style="background-color: gray;" href="#modal-one" class="btn">Cancel</a>
+  
+   <a style="margin-left: 2rem;" href="#modal-one" class="btn">Reserve</a>   </div>     
+
+          <div class="modal-footer"> 
+    
+          </div>
+          
+          
+               
+          
+            
+        </div>
+    </div>
+    <div  class="wrap"> <a href="#" class="btn btn-big">Reserve table</a>
+        <h2 style="color: red;" >Task 3</h2>
+    
+    </div>
+</body>
+</html>
